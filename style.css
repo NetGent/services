@@ -1,0 +1,289 @@
+/* NetGent – style.css */
+
+:root {
+  --ink: #12263A;
+  --ink-soft: #46586A;
+  --ground: #F2F5F7;
+  --panel: #FFFFFF;
+  --line: #CBD5DC;
+  --cable: #F2B705;
+  --cable-hover: #FFC81F;
+  --on-cable: #12263A;
+  --link: #0F6E7A;
+  --flag: #B3261E;
+  --maxw: 1080px;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #E8EEF3;
+    --ink-soft: #A9B7C4;
+    --ground: #0E1822;
+    --panel: #16232F;
+    --line: #2B3B49;
+    --link: #5CC1CF;
+    --flag: #FF8A80;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 400 1.0625rem/1.6 "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+a { color: var(--link); }
+
+a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem; }
+
+/* ---------- Header ---------- */
+
+header.site {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+}
+
+header.site .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+  padding-top: .9rem;
+  padding-bottom: .9rem;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+nav a {
+  margin-left: 1.25rem;
+  padding-bottom: 3px;
+  color: var(--ink);
+  font-size: .975rem;
+  text-decoration: none;
+  background: linear-gradient(var(--cable), var(--cable)) left bottom / 0 3px no-repeat;
+  transition: background-size .2s ease;
+}
+
+nav a:hover,
+nav a[aria-current] { background-size: 100% 3px; }
+nav a[aria-current] { font-weight: 600; }
+
+section[id], main[id] { scroll-margin-top: 4.5rem; }
+
+/* ---------- Hero ---------- */
+
+.hero { padding: 3.5rem 0 3rem; }
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+h1 {
+  margin: 0 0 1.1rem;
+  font-size: clamp(2rem, 4.6vw, 3.1rem);
+  line-height: 1.1;
+  letter-spacing: -.025em;
+  font-weight: 700;
+}
+
+.lead {
+  max-width: 34rem;
+  margin: 0 0 1.75rem;
+  color: var(--ink-soft);
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: .85rem 1.4rem;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  background: var(--cable);
+  color: var(--on-cable);
+  font-weight: 650;
+  text-decoration: none;
+  transition: background-color .15s ease, transform .15s ease;
+}
+
+.btn:hover { background: var(--cable-hover); transform: translateY(-1px); }
+
+.hero small {
+  display: block;
+  margin-top: 1rem;
+  color: var(--ink-soft);
+  font-size: .95rem;
+}
+
+/* ---------- Nätverksskiss (SVG) ---------- */
+
+figure.map { margin: 0; }
+figure.map svg { display: block; width: 100%; height: auto; }
+figure.map figcaption { margin-top: .5rem; color: var(--ink-soft); font-size: .9rem; }
+
+.cable { stroke: var(--ink); stroke-width: 2.5; fill: none; }
+
+.cable-live {
+  stroke: var(--cable);
+  stroke-width: 4;
+  fill: none;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: draw 1.6s ease-out .2s forwards;
+}
+
+@keyframes draw { to { stroke-dashoffset: 0; } }
+
+.node rect { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.node text { font: 600 14px "Segoe UI", system-ui, sans-serif; fill: var(--ink); }
+
+.flag rect { fill: var(--panel); stroke: var(--flag); stroke-width: 1.75; }
+.flag text { font: 600 12px "Segoe UI", system-ui, sans-serif; fill: var(--flag); }
+.flag line { stroke: var(--flag); stroke-width: 1.75; }
+
+/* ---------- Sektioner ---------- */
+
+section { padding: 3.25rem 0; }
+
+section.alt {
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -.02em;
+}
+
+h2.spaced { margin-top: 3rem; }
+
+.intro { max-width: 40rem; margin: 0 0 2rem; color: var(--ink-soft); }
+.intro.tight { margin: 1.5rem 0 0; }
+
+.deliverables {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.deliverables li { padding-left: 1.1rem; border-left: 4px solid var(--cable); }
+.deliverables strong { display: block; margin-bottom: .15rem; }
+.deliverables span { color: var(--ink-soft); }
+
+ol.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+ol.steps li { padding-top: .75rem; border-top: 3px solid var(--ink); counter-increment: step; }
+
+ol.steps li::before {
+  content: counter(step);
+  display: block;
+  margin-bottom: .15rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+ol.steps strong { display: block; }
+ol.steps span { color: var(--ink-soft); font-size: .98rem; }
+
+.after {
+  display: grid;
+  gap: .6rem;
+  max-width: 40rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.after li::before { content: "– "; color: var(--ink-soft); }
+
+/* ---------- Om mig ---------- */
+
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.about p { max-width: 36rem; margin: 0 0 1rem; }
+
+.facts { margin: 0; padding: 0; list-style: none; }
+.facts li { padding: .6rem 0; border-bottom: 1px solid var(--line); }
+.facts li:first-child { border-top: 1px solid var(--line); }
+
+.badge { margin-top: 1.5rem; }
+
+/* ---------- Kontakt ---------- */
+
+.contact-box {
+  max-width: 36rem;
+  padding: 1.75rem;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.contact-box p { margin: 0 0 .5rem; }
+.contact-box .big { font-size: 1.25rem; font-weight: 650; overflow-wrap: anywhere; }
+
+/* ---------- Sidfot ---------- */
+
+footer { padding: 2rem 0 3rem; color: var(--ink-soft); font-size: .92rem; }
+footer p { margin: 0 0 .4rem; }
+
+/* ---------- Responsivt ---------- */
+
+@media (max-width: 860px) {
+  .hero .wrap,
+  .about { grid-template-columns: 1fr; gap: 2rem; }
+  .deliverables { grid-template-columns: 1fr; }
+  ol.steps { grid-template-columns: 1fr 1fr; }
+  nav a:first-child { margin-left: 0; }
+}
+
+@media (max-width: 520px) {
+  ol.steps { grid-template-columns: 1fr; }
+  nav a { margin-left: .9rem; font-size: .9rem; }
+  nav a:first-child { margin-left: 0; }
+}
+
+/* ---------- Mindre rörelse ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cable-live { animation: none; stroke-dashoffset: 0; }
+  .btn, nav a { transition: none; }
+  .btn:hover { transform: none; }
+}

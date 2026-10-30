@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nätverksgenomlysning för företag i Växjö och Alvesta</title>
+<meta name="description" content="Jag går igenom företagets nätverk, ritar upp hur det hänger ihop och ger en prioriterad lista på vad som bör åtgärdas. För företag i Växjö och Alvesta med omnejd.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top">NetGent – nätverk och IT</a>
+    <nav aria-label="Huvudmeny">
+      <a href="#genomlysning">Genomlysning</a>
+      <a href="#efteråt">Hjälp efteråt</a>
+      <a href="#om">Om mig</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Vet du vad som sitter i ert nätverk?</h1>
+        <p class="lead">Jag går igenom företagets nätverk, ritar upp hur det hänger ihop och ger er en prioriterad lista på vad som bör åtgärdas. Fast pris, för småföretag i Växjö och Alvesta med omnejd.</p>
+        <a class="btn" href="#kontakt">Boka en genomgång</a>
+        <small>Förmötet på 30 minuter kostar inget.</small>
+      </div>
+
+      <figure class="map">
+        <svg viewBox="0 0 520 380" role="img" aria-labelledby="map-title map-desc">
+          <title id="map-title">Exempel på en nätverksskiss</title>
+          <desc id="map-desc">Internet kopplas till en brandvägg och en switch. Från switchen går kablar till Wi-Fi, en skrivare och en server. Tre markeringar visar exempel på fynd: gammal firmware, standardlösenord och gästnät saknas.</desc>
+
+          <!-- kablar -->
+          <path class="cable" d="M260 62 V104"/>
+          <path class="cable" d="M260 148 V190"/>
+          <path class="cable" d="M260 234 V262 H90 V290"/>
+          <path class="cable" d="M260 234 V290"/>
+          <path class="cable" d="M260 234 V262 H430 V290"/>
+          <!-- aktiv kabel som ritas upp -->
+          <path class="cable-live" d="M260 62 V104 M260 148 V190 M260 234 V290"/>
+
+          <!-- noder -->
+          <g class="node">
+            <rect x="200" y="18" width="120" height="44" rx="22"/>
+            <text x="260" y="45" text-anchor="middle">Internet</text>
+            <rect x="200" y="104" width="120" height="44" rx="6"/>
+            <text x="260" y="131" text-anchor="middle">Brandvägg</text>
+            <rect x="200" y="190" width="120" height="44" rx="6"/>
+            <text x="260" y="217" text-anchor="middle">Switch</text>
+            <rect x="30" y="290" width="120" height="44" rx="6"/>
+            <text x="90" y="317" text-anchor="middle">Wi-Fi</text>
+            <rect x="200" y="290" width="120" height="44" rx="6"/>
+            <text x="260" y="317" text-anchor="middle">Server / NAS</text>
+            <rect x="370" y="290" width="120" height="44" rx="6"/>
+            <text x="430" y="317" text-anchor="middle">Skrivare</text>
+          </g>
+
+          <!-- fynd -->
+          <g class="flag">
+            <line x1="320" y1="126" x2="352" y2="126"/>
+            <rect x="352" y="106" width="160" height="40" rx="4"/>
+            <text x="364" y="130">Gammal firmware</text>
+
+            <line x1="200" y1="212" x2="168" y2="212"/>
+            <rect x="8" y="192" width="160" height="40" rx="4"/>
+            <text x="20" y="216">Standardlösenord</text>
+
+            <line x1="90" y1="290" x2="90" y2="352"/>
+            <rect x="10" y="342" width="160" height="32" rx="4"/>
+            <text x="22" y="363">Gästnät saknas</text>
+          </g>
+        </svg>
+        <figcaption>Exempel på fynd i en genomlysning. Varje kund får sin egen skiss.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <section id="genomlysning" class="alt">
+    <div class="wrap">
+      <h2>Nätverksgenomlysning</h2>
+      <p class="intro">En kartläggning av hur nätverket ser ut idag, så att ni vet vad ni har och vad som är värt att åtgärda först. Den är ett bra första steg om ni inte har nätverket dokumenterat eller har fått det av en tidigare leverantör.</p>
+
+      <ul class="deliverables">
+        <li><strong>Nätverksskiss</strong><span>En ritning av hur internet, brandvägg, switchar, Wi-Fi och enheter hänger ihop.</span></li>
+        <li><strong>Utrustningslista</strong><span>Modell, firmwareversion och supportstatus för det som sitter i nätverket.</span></li>
+        <li><strong>Risker och åtgärder</strong><span>Det jag hittar sorteras i akut, kort sikt och längre sikt, med en uppskattad tidsåtgång för åtgärder.</span></li>
+        <li><strong>Genomgång</strong><span>En timme där vi går igenom rapporten tillsammans och ni får ställa frågor.</span></li>
+      </ul>
+
+      <h2 class="spaced">Så går det till</h2>
+      <ol class="steps">
+        <li><strong>Förmöte</strong><span>30 minuter om ert behov, era lokaler och vad som oroar er.</span></li>
+        <li><strong>Inventering</strong><span>Jag besöker er med skriftligt godkännande och dokumenterar nätverket.</span></li>
+        <li><strong>Rapport</strong><span>Ni får en skriftlig rapport med skiss, fynd och rekommendationer.</span></li>
+        <li><strong>Genomgång</strong><span>Vi går igenom rapporten. Därefter bestämmer ni vad ni vill göra.</span></li>
+      </ol>
+      <p class="intro tight">Priset är fast och överenskommet i förväg. Rapporten beskriver nätverkets läge vid besöket och är ingen garanti för säkerhet.</p>
+    </div>
+  </section>
+
+  <section id="efteråt">
+    <div class="wrap">
+      <h2>Hjälp efteråt</h2>
+      <p class="intro">Rapporten är er. Ni kan använda den själva, ta den till en annan leverantör eller låta mig fortsätta. Jag kan till exempel hjälpa till med:</p>
+      <ul class="after">
+        <li>Wi-Fi och nätverksdesign, till exempel gästnät och uppdelning i VLAN</li>
+        <li>Saneringsarbete: uppdatera firmware, byta lösenord och städa upp brandväggsregler</li>
+        <li>Backup och enkel övervakning</li>
+        <li>Dokumentation av nätverket</li>
+        <li>Rutiner för underhåll av nätverket</li>
+        <li>Felsökning och support, enligt överenskommelse</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="om" class="alt">
+    <div class="wrap about">
+      <div>
+        <h2>Om mig</h2>
+        <p>Jag heter Johan och är nätverksingenjör, bosatt i Alvesta. Jag har bakgrund inom nätverk och IT-infrastruktur och vill hjälpa mindre företag få samma ordning på sitt nätverk, precis som större organisationer har.</p>
+        <p>Jag skriver rapporterna på svenska eller engelska, efter ert önskemål. Rapporterna är skrivna för att vara förståeliga för personer som inte jobbar med IT.</p>
+      </div>
+
+      <div>
+        <ul class="facts">
+          <li><strong>Certifiering:</strong>
+            <a href="https://www.credly.com/badges/b9c09ee6-0bda-4f5d-94de-e61f49952f38" target="_blank" rel="noopener">CCNA (Cisco Certified Network Associate)</a>
+          </li>
+          <li><strong>Erfarenhet:</strong> Cisco, Aruba/HPE, WiFi, Brandväggar, Router, IT-säkerhet</li>
+          <li><strong>Område:</strong> Växjö och Alvesta med omnejd</li>
+          <li><strong>Passar:</strong> Kontor, butiker och mindre verksamheter</li>
+        </ul>
+
+        <div class="badge">
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b9c09ee6-0bda-4f5d-94de-e61f49952f38" data-share-badge-host="https://www.credly.com"></div>
+          <script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="wrap">
+      <h2>Kontakt</h2>
+      <p class="intro">Skicka ett mail så bokar vi ett förmöte.</p>
+      <div class="contact-box">
+        <p class="big"><a href="mailto:netgentjohan@gmail.com">netgentjohan@gmail.com</a></p>
+        <p>Växjö och Alvesta med omnejd</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>NetGent</p>
+    <p>Jag använder endast dina uppgifter för att svara på din förfrågan.</p>
+  </div>
+</footer>
+
+<script>
+  // Markerar den sektion som visas i menyn
+  (function () {
+    var links = document.querySelectorAll('nav a');
+    if (!('IntersectionObserver' in window) || !links.length) return;
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) { a.removeAttribute('aria-current'); });
+        var active = document.querySelector('nav a[href="#' + e.target.id + '"]');
+        if (active) active.setAttribute('aria-current', 'true');
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    links.forEach(function (a) {
+      var id = decodeURIComponent(a.getAttribute('href').slice(1));
+      var s = document.getElementById(id);
+      if (s) obs.observe(s);
+    });
+  })();
+</script>
+
+</body>
+</html>
